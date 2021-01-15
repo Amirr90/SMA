@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="2dp"
+    android:layout_marginBottom="4dp"
+    android:elevation="5dp"
+    android:padding="@dimen/_5sdp"
+    app:cardCornerRadius="5dp">
+
+
+    <RelativeLayout
+        android:id="@+id/card_Home3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/ripple_1"
+        android:clickable="true">
+
+
+        <TextView
+            android:id="@+id/sch_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/armata"
+            android:paddingLeft="@dimen/_10sdp"
+            android:text="Attendance"
+            android:textColor="@color/dark_grey"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/sch_textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sch_textView"
+            android:fontFamily="@font/armata"
+            android:paddingLeft="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_10sdp"
+            android:text="Attendance"
+            android:textColor="@color/dark_grey"
+            android:textSize="15dp" />
+
+        <TextView
+            android:layout_marginLeft="2dp"
+            android:layout_toRightOf="@+id/sch_textView"
+            android:id="@+id/sch_textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:fontFamily="@font/armata"
+            android:padding="@dimen/_5sdp"
+            android:text="New"
+            android:textColor="@android:color/holo_orange_dark"
+            android:textSize="@dimen/_10sdp"
+            android:textStyle="italic" />
+
+
+        <TextView
+            android:id="@+id/sch_textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sch_textView"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:fontFamily="@font/armata"
+            android:padding="@dimen/_5sdp"
+            android:paddingLeft="@dimen/_10sdp"
+            android:text="Last update: 2 mins ago"
+            android:textColor="#8E8D8D"
+            android:textSize="8dp" />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

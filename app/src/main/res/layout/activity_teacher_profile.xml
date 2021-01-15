@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileActivity">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/teacher_profile_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ToolbarTheme" />
+
+    <RelativeLayout
+        android:id="@+id/top_relative_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/teacher_profile_toolbar"
+        android:padding="20dp">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/t_profile"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/profile" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_toRightOf="@id/t_profile"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/armata"
+                android:paddingLeft="5dp"
+                android:text="Teacher Name"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/armata"
+                android:paddingLeft="5dp"
+                android:paddingTop="5dp"
+                android:text="Class 2 | Section A"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/_10sdp" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/armata"
+                android:padding="5dp"
+                android:text="Roll No: 125412 | Adm No: 36589"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/_10sdp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+   <androidx.cardview.widget.CardView
+       android:layout_marginTop="3dp"
+       android:layout_below="@id/top_relative_lay"
+       android:id="@+id/item_tabs_cardView"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:elevation="5dp">
+       <com.google.android.material.tabs.TabLayout
+           android:id="@+id/item_tabs"
+           android:layout_width="match_parent"
+           android:layout_height="40dp"
+           style="@style/MyCustomTabLayout"/>
+   </androidx.cardview.widget.CardView>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/item_tabs_cardView" />
+
+
+</RelativeLayout>

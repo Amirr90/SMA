@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".StudentsActivity">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/stu_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ToolbarTheme" />
+
+    <com.dinuscxj.refresh.RecyclerRefreshLayout
+        android:id="@+id/stu_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="10dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/stu_rec"
+            tools:listitem="@layout/all_student_view2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </com.dinuscxj.refresh.RecyclerRefreshLayout>
+</LinearLayout>

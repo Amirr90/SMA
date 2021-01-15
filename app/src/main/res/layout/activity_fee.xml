@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Student.FeeActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/fee_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ToolbarTheme" />
+
+    <RelativeLayout
+        android:id="@+id/status_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fee_toolbar"
+        android:layout_margin="@dimen/_10sdp"
+        android:background="@drawable/rectangle"
+        android:backgroundTint="@color/white"
+        android:elevation="@dimen/_5sdp"
+        android:textSize="16dp">
+
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:padding="10dp"
+            android:text="Unpaid:"
+            android:textColor="@color/red"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView23"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:padding="10dp"
+            android:text="Partial:"
+            android:textColor="@color/yellow"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:padding="@dimen/_10sdp"
+            android:text="Paid:"
+            android:textColor="@color/green2"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <com.dinuscxj.refresh.RecyclerRefreshLayout
+        android:id="@+id/fee_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/status_lay"
+        android:elevation="10dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/fee_rec"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/all_student_view2" />
+    </com.dinuscxj.refresh.RecyclerRefreshLayout>
+</RelativeLayout>

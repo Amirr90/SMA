@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:paddingBottom="@dimen/_10sdp"
+    tools:context=".ShowMarkSheetActivity">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/ShowMarkSheetActivity_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ToolbarTheme" />
+
+
+    <ProgressBar
+        android:id="@+id/ShowMarkSheetActivity_progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <com.dinuscxj.refresh.RecyclerRefreshLayout
+        android:id="@+id/ShowMarkSheetActivity_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ShowMarkSheetActivity_toolbar"
+        android:elevation="10dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/ShowMarkSheetActivity_rec"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/_5sdp"
+            tools:listitem="@layout/show_mark_sheet_view" />
+    </com.dinuscxj.refresh.RecyclerRefreshLayout>
+</RelativeLayout>

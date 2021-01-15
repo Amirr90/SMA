@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <CheckedTextView
+        style="@style/PopupSelectList"
+        android:id="@+id/checkedTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:checkMark="@drawable/radio"
+        android:fontFamily="@font/armata"
+        android:gravity="center_vertical"
+        android:padding="17dp"
+        android:text="Student Name"
+        android:textSize="20dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:layout_below="@+id/checkedTextView"
+        android:layout_marginLeft="20dp"
+        android:background="@color/dark_grey" />
+</RelativeLayout>

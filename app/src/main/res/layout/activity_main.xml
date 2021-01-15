@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:orientation="vertical" xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/plane_layout"
+        android:background="@color/colorAccent"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"/>
+    <RelativeLayout
+        android:paddingTop="20dp"
+        android:id="@+id/info_lay"
+        android:background="@color/colorAccent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_centerHorizontal="true"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/t_profile_image"
+            android:layout_marginTop="10dp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/profile"
+            app:civ_border_width="2dp"
+            app:civ_border_color="@color/colorPrimaryDark"/>
+
+        <TextView
+            android:id="@+id/t_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/t_profile_image"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/armata"
+            android:paddingTop="10dp"
+            android:text="Teacher Name here"
+            android:textColor="@android:color/white"
+            android:textSize="22dp" />
+
+        <TextView
+            android:id="@+id/t_class"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/t_name"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/armata"
+            android:text="Class 3A,Science"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/t_class"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/armata"
+            android:text="Xaivers's School"
+            android:textColor="@android:color/white" />
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginBottom="25dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_below="@+id/info_lay"
+        android:id="@+id/rv_parent"
+        tools:listitem="@layout/rv_parent_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+</RelativeLayout>
